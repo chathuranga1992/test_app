@@ -8,6 +8,7 @@ import android.text.Spanned;
 import android.text.style.StyleSpan;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Space;
@@ -18,6 +19,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.bumptech.glide.Glide;
 import com.example.sample_log_app.GenericActivity;
 import com.example.sample_log_app.R;
 import com.example.sample_log_app.ui.forgetpassword.ForgotPasswordActivity;
@@ -60,6 +62,9 @@ public class LoginActivity extends GenericActivity {
     @BindView(R.id.layoutContent)
     LinearLayout mLayoutContent;
 
+    @BindView(R.id.iv_loading)
+    ImageView myImageView;
+
     private LoginViewModel mLoginViewModel;
     private int clickCount = 0;
     private Handler mHandler;
@@ -74,6 +79,11 @@ public class LoginActivity extends GenericActivity {
         mHandler = new Handler();
         makeFullScreen();
         setupBottomSetup();
+
+
+        Glide.with(LoginActivity.this)
+                .load(R.drawable.ic_loading)
+                .into(myImageView);
 
         mLoginViewModel = new ViewModelProvider(this).get(LoginViewModel.class);
         mLoginViewModel.init(this);

@@ -23,12 +23,18 @@ public class SplashActivity extends GenericActivity {
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(this);
         makeFullScreen();
+
+        Glide.with(SplashActivity.this)
+                .load(R.drawable.ic_loading)
+                .into(myImageView);
+
         madeTransition();
 
-        Glide.with(this)
-                .load(R.drawable.ic_loading)
-                .centerCrop()
-                .into(myImageView);
+/*        Glide.with(getContext())
+                .load(getContext().getDrawable(R.drawable.loading))
+                .thumbnail(.25f)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(mIv);*/
     }
 
     private void madeTransition() {
@@ -42,6 +48,6 @@ public class SplashActivity extends GenericActivity {
 
                 startActivity(new Intent(SplashActivity.this, LoginActivity.class));
             }
-        }, 1500);
+        }, 3000);
     }
 }
