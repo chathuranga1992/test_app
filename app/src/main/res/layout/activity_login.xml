@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginActivity"
+    android:orientation="vertical"
+    android:id="@+id/rootLinearLayoutLogin"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:windowFullscreen="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layoutContent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="2.0"
+                    android:layout_marginTop="32dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_loading"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TitleTextView"
+                        android:text="@string/login"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="8dp"/>
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="2.0">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_layout_email_login"
+                        style="@style/TextIpLayout"
+                        android:layout_width="match_parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/text_input_edit_text_email_login"
+                            style="@style/editTexts"
+                            android:layout_width="match_parent"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/hint_email"
+                            android:importantForAutofill="noExcludeDescendants"
+                            android:inputType="textEmailAddress|textNoSuggestions" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_layout_password_login"
+                        style="@style/TextIpLayout"
+                        android:layout_width="match_parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/text_input_edit_text_password_login"
+                            style="@style/editTexts"
+                            android:layout_width="match_parent"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/hint_password"
+                            android:importantForAutofill="noExcludeDescendants"
+                            android:inputType="textPassword|textNoSuggestions" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1.6"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/button_activity_login"
+                                style="@style/MainButton"
+                                android:layout_width="220dp"
+                                android:layout_height="45dp"
+                                android:text="@string/login"
+                                android:textAllCaps="false"
+                                android:onClick="onSubmitLogin"
+                                android:layout_marginBottom="8dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_forgot_pw"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/forgot_password"
+                                android:layout_marginTop="4dp"
+                                android:onClick="onForgotPw"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_login_bottom_link"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/TitleTextView"
+                            android:text="@string/don_t_have_an_account_sign_up"
+                            android:onClick="onRegister"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="62dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

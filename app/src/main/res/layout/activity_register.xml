@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rootLinearLayoutRegister"
+    tools:context=".ui.register.RegisterActivity"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:windowFullscreen="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorInfoTop"
+            android:gravity="center"
+            android:paddingTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:orientation="horizontal"
+                android:background="@color/colorInfoTop">
+
+            <ImageView
+                android:id="@+id/iv_back_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                android:onClick="onBackRegister"
+                android:padding="2dp"
+                android:src="@android:drawable/ic_media_rew"
+                android:visibility="invisible"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TitleTextView"
+                android:textColor="@color/colorTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/sign_up"
+                android:textStyle="bold"
+                android:layout_marginEnd="64dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/layoutContent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout_name_register"
+                    style="@style/TextIpLayout"
+                    android:layout_width="match_parent"
+                    app:boxStrokeErrorColor="@color/colorRed">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_input_edit_text_name_register"
+                        style="@style/editTexts"
+                        android:layout_width="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/name"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="textEmailAddress|textNoSuggestions" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout_email_register"
+                    style="@style/TextIpLayout"
+                    android:layout_width="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_input_edit_text_email_register"
+                        style="@style/editTexts"
+                        android:layout_width="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_email"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="textEmailAddress|textNoSuggestions" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout_password_register"
+                    style="@style/TextIpLayout"
+                    android:layout_width="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_input_edit_text_password_register"
+                        style="@style/editTexts"
+                        android:layout_width="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_password"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="textPassword|textNoSuggestions" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout_cnfm_password_register"
+                    style="@style/TextIpLayout"
+                    android:layout_width="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_input_edit_text_cnfm_password_register"
+                        style="@style/editTexts"
+                        android:layout_width="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/retype_password"
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="textPassword|textNoSuggestions" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_activity_register"
+                    style="@style/MainButton"
+                    android:layout_width="220dp"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="8dp"
+                    android:onClick="onSubmitRegister"
+                    android:text="@string/sign_up"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_register_bottom_link"
+                        style="@style/TitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="32dp"
+                        android:layout_marginTop="16dp"
+                        android:onClick="onRegisterLoginLink"
+                        android:text="@string/have_an_account_login" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

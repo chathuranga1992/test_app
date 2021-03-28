@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="register_gender_span">16dp</dimen>
+    <dimen name="appMargin">32dp</dimen>
+</resources>

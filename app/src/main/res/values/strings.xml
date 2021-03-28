@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Sample_Log_App</string>
+    <string name="sample_token">test_sample_token_123</string>
+    <string name="no_internet">Please Check Your Network Connection</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="don_t_have_an_account_sign_up">Dont have an account ? SignUp</string>
+    <string name="sign_up">SignUp</string>
+    <string name="name">Name</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="have_an_account_login">Have an Account ? SignIn</string>
+    <string name="check_mail">Please Check Your Email...!!!</string>
+    <string name="button_preview">Preview</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="info">Info</string>
+    <string name="forgot_pw_success_msg">Please check your email</string>
+</resources>
